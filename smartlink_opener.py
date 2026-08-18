@@ -1226,41 +1226,52 @@ class AdsterraSmartlinkOpener:
 
             print(f"[{profile_name}] Opening: {url[:60]}...")
 
-            # Navigate to smartlink with better error handling for redirects
-            try:
-                # Use commit instead of domcontentloaded to handle redirects better
-                response = await page.goto(
-                    url,
-                    wait_until="commit",  # Changed from domcontentloaded to commit for better redirect handling
-                    timeout=self.config["settings"]["timeout"],
-                )
-
-                # Check if response is valid (redirects might return None)
-                if response and response.status >= 400:
-                    # If we get an error status, try to continue anyway (redirects might still work)
-                    print(
-                        f"[{profile_name}] Warning: HTTP {response.status}, continuing..."
+            # Navigate to smartlink with retry logic
+            nav_success = False
+            for attempt in range(2):  # Try up to 2 times
+                try:
+                    response = await page.goto(
+                        url,
+                        wait_until="domcontentloaded",
+                        timeout=self.config["settings"]["timeout"],
                     )
 
-            except Exception as nav_error:
-                # If navigation fails, check if page loaded anyway (redirects can cause this)
-                try:
-                    current_url = page.url
-                    if current_url and current_url != "about:blank":
+                    if response and response.status >= 400:
                         print(
-                            f"[{profile_name}] Navigation error but page loaded: {current_url[:60]}..."
+                            f"[{profile_name}] Warning: HTTP {response.status} (attempt {attempt+1})"
                         )
-                    else:
-                        raise nav_error
-                except:
-                    # If page didn't load, try one more time with networkidle
+                        if attempt == 0:
+                            await asyncio.sleep(2)
+                            continue  # Retry
+
+                    nav_success = True
+                    break
+
+                except Exception as nav_error:
+                    error_str = str(nav_error)
+
+                    # Check if page loaded despite navigation error
                     try:
-                        await page.goto(
-                            url,
-                            wait_until="networkidle",
-                            timeout=self.config["settings"]["timeout"],
-                        )
+                        current_url = page.url
+                        if (
+                            current_url
+                            and current_url != "about:blank"
+                            and "chrome-error://" not in current_url
+                        ):
+                            print(
+                                f"[{profile_name}] Nav error but page loaded: {current_url[:60]}..."
+                            )
+                            nav_success = True
+                            break
                     except:
+                        pass
+
+                    if attempt == 0:
+                        print(
+                            f"[{profile_name}] Navigation failed (attempt {attempt+1}), retrying..."
+                        )
+                        await asyncio.sleep(3)
+                    else:
                         raise nav_error
 
             # Wait for Adsterra redirect chain with better error handling
@@ -1308,11 +1319,15 @@ class AdsterraSmartlinkOpener:
                     f"[{profile_name}] ⚠ Redirect error (may still be successful): {error_msg}"
                 )
                 # Sometimes redirect errors still result in successful visits
-                # Check if page loaded anyway
+                # Check if page loaded anyway (but NOT chrome-error:// pages)
                 try:
                     if page and not page.is_closed():
                         current_url = page.url
-                        if current_url and current_url != "about:blank":
+                        if (
+                            current_url
+                            and current_url != "about:blank"
+                            and "chrome-error://" not in current_url
+                        ):
                             print(
                                 f"[{profile_name}] Page loaded despite error: {current_url[:60]}..."
                             )
@@ -1324,6 +1339,10 @@ class AdsterraSmartlinkOpener:
                                 duration=duration,
                             )
                             return True
+                        else:
+                            print(
+                                f"[{profile_name}] Page failed to load (error page: {current_url[:60] if current_url else 'None'}...)"
+                            )
                 except:
                     pass
             else:
@@ -1789,6 +1808,11 @@ class AdsterraSmartlinkOpener:
 
             if browser is None:
                 continue
+
+            # Wait 15 seconds before processing (gives time to prepare)
+            print("\nBrowser 15 seconds mein start hoga...")
+            await asyncio.sleep(15)
+            print("Starting processing...\n")
 
             # Process all smartlinks in parallel - each gets its own random profile
             parallel_count = self.config["settings"].get("parallel_smartlinks", 3)

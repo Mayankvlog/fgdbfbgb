@@ -1093,6 +1093,11 @@ class ClickLinkApp:
             html_path = self.html_file.absolute()
             print(f"✓ HTML page generated: {html_path}")
             
+            # Wait 15 seconds before launching browser
+            print("\nBrowser 15 seconds mein open hoga...")
+            await asyncio.sleep(15)
+            print("Browser launching...")
+            
             # Launch browser
             browser = await p.chromium.launch(
                 headless=settings.get("headless", False),
