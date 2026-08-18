@@ -1,0 +1,12 @@
+{
+  "proxy_examples": {
+    "no_proxy": null,
+    "http_basic": "http://proxy.example.com:8080",
+    "http_with_auth": "http://username:password@proxy.example.com:8080",
+    "https_with_auth": "https://username:password@proxy.example.com:8080",
+    "socks5_with_auth": "socks5://username:password@proxy.example.com:1080",
+    "ip_port_format": "192.168.1.100:8080"
+  },
+  "note": "Copy the proxy string to the 'proxy' field in your profile configuration in config.json"
+}
+

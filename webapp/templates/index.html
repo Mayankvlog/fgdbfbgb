@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Config Editor</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Project Configuration</h1>
+      <div class="run-panel">
+        <h2>Run Automation</h2>
+        <p>Start or stop the `smartlink_opener` automation from here.</p>
+        <div class="run-actions">
+          <button id="start-btn">Start Run</button>
+        </div>
+        <div class="runs-list" id="runs-list"></div>
+        <hr />
+      </div>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class="messages">{% for m in messages %}<li>{{ m }}</li>{% endfor %}</ul>
+      {% endif %}
+      {% endwith %}
+
+      <form method="post">
+        <div class="raw-json-panel">
+          <button type="button" id="toggle-raw">Edit Raw JSON</button>
+          <div id="raw-area" style="display:none;margin-top:8px">
+            <textarea id="raw-json" style="width:100%;min-height:220px;font-family:monospace"></textarea>
+            <div style="margin-top:8px">
+              <button type="button" id="save-raw">Save Raw JSON</button>
+              <button type="button" id="validate-raw">Validate</button>
+            </div>
+            <div id="raw-msg" style="margin-top:8px;color:#b00"></div>
+          </div>
+        </div>
+        <table class="config-table">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Value (JSON-aware)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for k, v in config.items() %}
+            <tr>
+              <td class="key">{{ k }}</td>
+              <td>
+                <textarea name="{{ k }}">{{ v | tojson | safe }}</textarea>
+              </td>
+            </tr>
+            {% endfor %}
+            <tr class="new-row">
+              <td><input name="new_key" placeholder="new key" /></td>
+              <td><input name="new_value" placeholder='new value (e.g. true, 123, "text", [1,2])' /></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="actions">
+          <button type="submit">Save Configuration</button>
+        </div>
+      </form>
+      <hr />
+      <script>
+        // Raw JSON editor
+        async function loadRaw() {
+          const res = await fetch('/api/config');
+          const cfg = await res.json();
+          document.getElementById('raw-json').value = JSON.stringify(cfg, null, 2);
+        }
+        document.getElementById('toggle-raw').addEventListener('click', async () => {
+          const el = document.getElementById('raw-area');
+          if (el.style.display === 'none') {
+            await loadRaw();
+            el.style.display = 'block';
+          } else {
+            el.style.display = 'none';
+          }
+        });
+        document.getElementById('validate-raw').addEventListener('click', () => {
+          const txt = document.getElementById('raw-json').value;
+          try { JSON.parse(txt); document.getElementById('raw-msg').textContent = 'Valid JSON'; document.getElementById('raw-msg').style.color = '#080'; }
+          catch (e) { document.getElementById('raw-msg').textContent = 'Invalid JSON: ' + e; document.getElementById('raw-msg').style.color = '#b00'; }
+        });
+        document.getElementById('save-raw').addEventListener('click', async () => {
+          const txt = document.getElementById('raw-json').value;
+          try {
+            const payload = JSON.parse(txt);
+            const res = await fetch('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            const data = await res.json();
+            if (data.status === 'ok') {
+              alert('Configuration saved');
+              location.reload();
+            } else {
+              alert('Save returned: ' + JSON.stringify(data));
+            }
+          } catch (e) { alert('Invalid JSON: ' + e); }
+        });
+      </script>
+      <script>
+        async function fetchRuns() {
+          const res = await fetch('/api/runs');
+          const runs = await res.json();
+          const container = document.getElementById('runs-list');
+          if (!runs || runs.length === 0) {
+            container.innerHTML = '<em>No active runs</em>';
+            return;
+          }
+          container.innerHTML = '';
+          runs.forEach(r => {
+            const el = document.createElement('div');
+            el.className = 'run-item';
+            el.innerHTML = `<strong>${r.job_id}</strong> — PID ${r.pid} — ${r.status} <button data-id="${r.job_id}" class="stop-btn">Stop</button> <button data-id="${r.job_id}" class="view-btn">View Logs</button><pre class="log" id="log-${r.job_id}" style="display:none"></pre>`;
+            container.appendChild(el);
+          });
+          document.querySelectorAll('.stop-btn').forEach(b => b.addEventListener('click', async (e) => {
+            const id = e.target.getAttribute('data-id');
+            await fetch(`/api/run/${id}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'stop' }) });
+            setTimeout(fetchRuns, 500);
+          }));
+          document.querySelectorAll('.view-btn').forEach(b => b.addEventListener('click', async (e) => {
+            const id = e.target.getAttribute('data-id');
+            const res = await fetch(`/api/run/${id}`);
+            const data = await res.json();
+            const pre = document.getElementById('log-' + id);
+            pre.style.display = pre.style.display === 'none' ? 'block' : 'none';
+            pre.textContent = data.log_tail || '';
+          }));
+        }
+
+        document.getElementById('start-btn').addEventListener('click', async () => {
+          document.getElementById('start-btn').disabled = true;
+          const res = await fetch('/api/run', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({}) });
+          const data = await res.json();
+          setTimeout(() => { document.getElementById('start-btn').disabled = false; fetchRuns(); }, 500);
+          alert('Started job: ' + (data.job_id || 'unknown'));
+        });
+
+        // refresh runs every 5s
+        fetchRuns();
+        setInterval(fetchRuns, 5000);
+      </script>
+      <div>
+        <strong>API:</strong> GET <code>/api/config</code> or POST JSON to <code>/api/config</code>
+      </div>
+    </div>
+  </body>
+
+</html>

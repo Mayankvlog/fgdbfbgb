@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 461, in __init__
+    print("\u2713 UserAgent generator initialized")
+  File "C:\Users\brosh\.pyenv\pyenv-win\versions\3.10.11\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 1793, in <module>
+    asyncio.run(main())
+  File "C:\Users\brosh\.pyenv\pyenv-win\versions\3.10.11\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\brosh\.pyenv\pyenv-win\versions\3.10.11\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 1788, in main
+    opener = AdsterraSmartlinkOpener()
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 463, in __init__
+    print(f"\u26a0 Warning: Failed to initialize UserAgent generator: {e}")
+  File "C:\Users\brosh\.pyenv\pyenv-win\versions\3.10.11\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u26a0' in position 0: character maps to <undefined>

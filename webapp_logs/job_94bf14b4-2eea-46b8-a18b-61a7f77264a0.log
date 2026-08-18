@@ -1,0 +1,221 @@
+[OK] UserAgent generator initialized
+============================================================
+ADSTERRRA SMARTLINK OPENER - AUTO MODE
+============================================================
+Smartlinks: 30
+Recycle Interval: 900 seconds (15.0 minutes)
+Processing: Sequential (one by one)
+============================================================
+
+Starting automated cycles...
+Press Ctrl+C to stop
+
+
+============================================================
+CYCLE #1 - Starting at 2025-11-19 00:51:42
+============================================================
+[OK] Browser initialized successfully
+
+Processing 30 smartlinks in parallel (batch size: 5)...
+Each smartlink will use:
+  - Random profile (platform, timezone, locale, viewport, WebGL)
+  - Random proxy from: ['zhogyichan.custom36:hello123', 'zhogyichan.custom38:hello123']
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_0_20251119_005143] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== chrome ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[auto_profile_1_20251119_005143] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15
+[auto_profile_2_20251119_005143] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_3_20251119_005143] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
+[auto_profile_4_20251119_005143] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
+[auto_profile_1_20251119_005143] Opening: https://reliableguardianindifference.com/yv72zqdp2u?key=44c9...
+[auto_profile_4_20251119_005143] Opening: https://reliableguardianindifference.com/j3tzmzfe1?key=38144...
+[auto_profile_2_20251119_005143] Opening: https://reliableguardianindifference.com/k0m49bbc?key=4d5bd8...
+[auto_profile_0_20251119_005143] Opening: https://reliableguardianindifference.com/x2j7krbhy?key=6e2fa...
+[auto_profile_3_20251119_005143] Opening: https://reliableguardianindifference.com/t2jv44p9iv?key=1b6d...
+[auto_profile_2_20251119_005143] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_2_20251119_005143] [OK] Successfully processed
+[auto_profile_0_20251119_005143] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_0_20251119_005143] [OK] Successfully processed
+[auto_profile_4_20251119_005143] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_4_20251119_005143] [OK] Successfully processed
+[auto_profile_3_20251119_005143] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_3_20251119_005143] [OK] Successfully processed
+[auto_profile_1_20251119_005143] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_1_20251119_005143] [OK] Successfully processed
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15
+[auto_profile_5_20251119_005236] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_6_20251119_005236] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_7_20251119_005236] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_8_20251119_005236] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_9_20251119_005236] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_5_20251119_005236] Opening: https://reliableguardianindifference.com/fjdmyf8vv5?key=e1fe...
+[auto_profile_7_20251119_005236] Opening: https://reliableguardianindifference.com/wa8xf8ik5?key=8de99...
+[auto_profile_6_20251119_005236] Opening: https://reliableguardianindifference.com/p45ign4yq?key=1a160...
+[auto_profile_8_20251119_005236] Opening: https://reliableguardianindifference.com/bnsh8rn73y?key=5924...
+[auto_profile_9_20251119_005236] Opening: https://reliableguardianindifference.com/xe3ekjrcva?key=376a...
+[auto_profile_6_20251119_005236] Error: 'charmap' codec can't encode character '\u26a0' in position 33: character maps to <undefined>
+[auto_profile_7_20251119_005236] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_7_20251119_005236] [OK] Successfully processed
+[auto_profile_9_20251119_005236] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_9_20251119_005236] [OK] Successfully processed
+[auto_profile_8_20251119_005236] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_8_20251119_005236] [OK] Successfully processed
+[auto_profile_5_20251119_005236] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_5_20251119_005236] [OK] Successfully processed
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_10_20251119_005343] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== chrome ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[auto_profile_11_20251119_005343] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+[auto_profile_12_20251119_005343] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_13_20251119_005343] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_14_20251119_005343] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_10_20251119_005343] Opening: https://reliableguardianindifference.com/hzmd2vn2?key=462d74...
+[auto_profile_12_20251119_005343] Opening: https://reliableguardianindifference.com/e7exqhctn?key=b724d...
+[auto_profile_11_20251119_005343] Opening: https://reliableguardianindifference.com/zxxk5dd014?key=a890...
+[auto_profile_13_20251119_005343] Opening: https://reliableguardianindifference.com/psuehdk4d?key=533cc...
+[auto_profile_14_20251119_005343] Opening: https://reliableguardianindifference.com/r1qa58ynzq?key=e992...
+[auto_profile_10_20251119_005343] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_10_20251119_005343] [OK] Successfully processed
+[auto_profile_11_20251119_005343] Redirected to: https://www.opera.com/fr/computer/thanks?ni=eapgx&os=windows...
+[auto_profile_11_20251119_005343] [OK] Successfully processed
+[auto_profile_12_20251119_005343] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_12_20251119_005343] [OK] Successfully processed
+[auto_profile_14_20251119_005343] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_14_20251119_005343] [OK] Successfully processed
+[auto_profile_13_20251119_005343] Error: 'charmap' codec can't encode character '\u26a0' in position 34: character maps to <undefined>
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_15_20251119_005458] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.4 Safari/605.1.15
+[auto_profile_16_20251119_005458] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.4 Safari/605.1.15
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
+[auto_profile_17_20251119_005458] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15
+[auto_profile_18_20251119_005458] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0
+[auto_profile_19_20251119_005458] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0
+[auto_profile_15_20251119_005458] Opening: https://reliableguardianindifference.com/zahbv874?key=761d29...
+[auto_profile_16_20251119_005458] Opening: https://reliableguardianindifference.com/bk5u57id57?key=9090...
+[auto_profile_18_20251119_005458] Opening: https://reliableguardianindifference.com/ct662x1z?key=4a706b...
+[auto_profile_17_20251119_005458] Opening: https://reliableguardianindifference.com/q2pft73g2j?key=7f65...
+[auto_profile_19_20251119_005458] Opening: https://reliableguardianindifference.com/dfkkd5jt?key=3994bb...
+[auto_profile_19_20251119_005458] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_19_20251119_005458] [OK] Successfully processed
+[auto_profile_15_20251119_005458] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_15_20251119_005458] [OK] Successfully processed
+[auto_profile_16_20251119_005458] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_16_20251119_005458] [OK] Successfully processed
+[auto_profile_18_20251119_005458] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_18_20251119_005458] [OK] Successfully processed
+[auto_profile_17_20251119_005458] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_17_20251119_005458] [OK] Successfully processed
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_20_20251119_005559] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15
+[auto_profile_21_20251119_005559] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15
+====== chrome ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[auto_profile_22_20251119_005559] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+[auto_profile_23_20251119_005559] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_24_20251119_005559] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_20_20251119_005559] Opening: https://reliableguardianindifference.com/v7w1fs139?key=6399b...
+[auto_profile_21_20251119_005559] Opening: https://reliableguardianindifference.com/yzmj1as6g?key=ba4a4...
+[auto_profile_22_20251119_005559] Opening: https://reliableguardianindifference.com/tpnbytepqs?key=0883...
+[auto_profile_23_20251119_005559] Opening: https://reliableguardianindifference.com/uehd8evqp?key=c4f11...
+[auto_profile_24_20251119_005559] Opening: https://reliableguardianindifference.com/d7jyz75nx4?key=355a...
+[auto_profile_22_20251119_005559] Error: 'charmap' codec can't encode character '\u26a0' in position 34: character maps to <undefined>
+[auto_profile_24_20251119_005559] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_24_20251119_005559] [OK] Successfully processed
+[auto_profile_20_20251119_005559] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_20_20251119_005559] [OK] Successfully processed
+[auto_profile_23_20251119_005559] Error: 'charmap' codec can't encode character '\u26a0' in position 34: character maps to <undefined>
+[auto_profile_21_20251119_005559] Error: 'charmap' codec can't encode character '\u26a0' in position 34: character maps to <undefined>
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+[auto_profile_25_20251119_005715] Using proxy: http://154.198.32.71:8083 zhogyichan.custom36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15 Ddg/18.3
+[auto_profile_26_20251119_005715] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15 Ddg/18.3
+====== chrome ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[auto_profile_27_20251119_005715] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+====== safari ====== Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15
+[auto_profile_28_20251119_005715] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15
+====== edge ====== Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_29_20251119_005715] Using proxy: http://154.198.32.71:8083 zhogyichan.custom38
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+[auto_profile_25_20251119_005715] Opening: https://reliableguardianindifference.com/wbu0g1m8?key=2ea4c9...
+[auto_profile_26_20251119_005715] Opening: https://reliableguardianindifference.com/ymy3v7zvs?key=e755d...
+[auto_profile_27_20251119_005715] Opening: https://reliableguardianindifference.com/iknunu9s?key=f1162f...
+[auto_profile_28_20251119_005715] Opening: https://reliableguardianindifference.com/w20gucgm?key=80c58e...
+[auto_profile_29_20251119_005715] Opening: https://reliableguardianindifference.com/esyvzu990b?key=22f2...
+[auto_profile_29_20251119_005715] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_29_20251119_005715] [OK] Successfully processed
+[auto_profile_27_20251119_005715] Redirected to: https://www.opera.com/computer/thanks?ni=eapgx&os=windows&ut...
+[auto_profile_27_20251119_005715] [OK] Successfully processed
+[auto_profile_26_20251119_005715] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_26_20251119_005715] [OK] Successfully processed
+[auto_profile_25_20251119_005715] Redirected to: https://cleanerbest.online/click.php?key=1150nyhcx2rrdp5ol3v...
+[auto_profile_25_20251119_005715] [OK] Successfully processed
+[auto_profile_28_20251119_005715] Redirected to: https://chaturbate.com/?join_overlay=1&campaign=KK90V&sid=5c...
+[auto_profile_28_20251119_005715] [OK] Successfully processed
+[OK] Closed browser
+
+============================================================
+CYCLE #1 SUMMARY REPORT
+============================================================
+Duration: 0:06:30.066658
+Smartlinks Processed: 30
+  [OK] Successful: 25 (83.3%)
+Traceback (most recent call last):
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 1793, in <module>
+    asyncio.run(main())
+  File "C:\Users\brosh\.pyenv\pyenv-win\versions\3.10.11\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\brosh\.pyenv\pyenv-win\versions\3.10.11\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 1789, in main
+    await opener.run()
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 1764, in run
+    await self._run_cycle(p, smartlinks, recycle_interval)
+  File "C:\Users\brosh\Desktop\adsterra_automate_playwright\smartlink_opener.py", line 1714, in _run_cycle
+    print(
+  File "C:\Users\brosh\.pyenv\pyenv-win\versions\3.10.11\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 2: character maps to <undefined>

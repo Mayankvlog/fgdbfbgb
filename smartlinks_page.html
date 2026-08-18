@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartlinks Clicker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .card-header h3 {
+            color: #333;
+            font-size: 1.3em;
+        }
+        
+        .status {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            background: #e0e0e0;
+            color: #666;
+        }
+        
+        .status.clicked {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .status.processing {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .status.error {
+            background: #f44336;
+            color: white;
+        }
+        
+        .card-body {
+            text-align: center;
+        }
+        
+        .link-url {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            word-break: break-all;
+        }
+        
+        .click-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .click-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .click-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .click-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        
+        .stats {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 Smartlinks Clicker</h1>
+            <p>Click on any card to open the smartlink</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-links">21</div>
+                    <div class="stat-label">Total Links</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="clicked-links">0</div>
+                    <div class="stat-label">Clicked</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="success-links">0</div>
+                    <div class="stat-label">Success</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="error-links">0</div>
+                    <div class="stat-label">Errors</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cards-grid">
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/fjdmyf8vv5?key=e1fe5ec7bb686db4abfbe340c3fa2b64" data-index="1">
+                <div class="card-header">
+                    <h3>Smartlink #1</h3>
+                    <span class="status" id="status-1">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-1" onclick="handleClick(1, 'https://reliableguardianindifference.com/fjdmyf8vv5?key=e1fe5ec7bb686db4abfbe340c3fa2b64')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/psuehdk4d?key=533ccc61246a48dd91a859a5bbd970ad" data-index="2">
+                <div class="card-header">
+                    <h3>Smartlink #2</h3>
+                    <span class="status" id="status-2">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-2" onclick="handleClick(2, 'https://reliableguardianindifference.com/psuehdk4d?key=533ccc61246a48dd91a859a5bbd970ad')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/e7exqhctn?key=b724ddffaae0e8ea4418cc29895ffe9e" data-index="3">
+                <div class="card-header">
+                    <h3>Smartlink #3</h3>
+                    <span class="status" id="status-3">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-3" onclick="handleClick(3, 'https://reliableguardianindifference.com/e7exqhctn?key=b724ddffaae0e8ea4418cc29895ffe9e')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/r1qa58ynzq?key=e992eba0e0aff328a2fbfff7ae406cc1" data-index="4">
+                <div class="card-header">
+                    <h3>Smartlink #4</h3>
+                    <span class="status" id="status-4">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-4" onclick="handleClick(4, 'https://reliableguardianindifference.com/r1qa58ynzq?key=e992eba0e0aff328a2fbfff7ae406cc1')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/ct662x1z?key=4a706b2753ed012ed2a32781c545d2e1" data-index="5">
+                <div class="card-header">
+                    <h3>Smartlink #5</h3>
+                    <span class="status" id="status-5">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-5" onclick="handleClick(5, 'https://reliableguardianindifference.com/ct662x1z?key=4a706b2753ed012ed2a32781c545d2e1')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/yzmj1as6g?key=ba4a474ee8f3e2d1de634cd09f8d77ac" data-index="6">
+                <div class="card-header">
+                    <h3>Smartlink #6</h3>
+                    <span class="status" id="status-6">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-6" onclick="handleClick(6, 'https://reliableguardianindifference.com/yzmj1as6g?key=ba4a474ee8f3e2d1de634cd09f8d77ac')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/esyvzu990b?key=22f275f86a75408229dd53edc8e95c90" data-index="7">
+                <div class="card-header">
+                    <h3>Smartlink #7</h3>
+                    <span class="status" id="status-7">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-7" onclick="handleClick(7, 'https://reliableguardianindifference.com/esyvzu990b?key=22f275f86a75408229dd53edc8e95c90')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/bk5u57id57?key=9090904bbe46c5dc5c473fe1747dba57" data-index="8">
+                <div class="card-header">
+                    <h3>Smartlink #8</h3>
+                    <span class="status" id="status-8">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-8" onclick="handleClick(8, 'https://reliableguardianindifference.com/bk5u57id57?key=9090904bbe46c5dc5c473fe1747dba57')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/w20gucgm?key=80c58ee0718f6087967134c8780ee784" data-index="9">
+                <div class="card-header">
+                    <h3>Smartlink #9</h3>
+                    <span class="status" id="status-9">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-9" onclick="handleClick(9, 'https://reliableguardianindifference.com/w20gucgm?key=80c58ee0718f6087967134c8780ee784')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/j3tzmzfe1?key=381445f820717a86399dedb8d3c36078" data-index="10">
+                <div class="card-header">
+                    <h3>Smartlink #10</h3>
+                    <span class="status" id="status-10">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-10" onclick="handleClick(10, 'https://reliableguardianindifference.com/j3tzmzfe1?key=381445f820717a86399dedb8d3c36078')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/wa8xf8ik5?key=8de99a5854dcf3e802b7ef6a68f57b3d" data-index="11">
+                <div class="card-header">
+                    <h3>Smartlink #11</h3>
+                    <span class="status" id="status-11">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-11" onclick="handleClick(11, 'https://reliableguardianindifference.com/wa8xf8ik5?key=8de99a5854dcf3e802b7ef6a68f57b3d')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/p45ign4yq?key=1a160b2c012243eac8bed670535909a6" data-index="12">
+                <div class="card-header">
+                    <h3>Smartlink #12</h3>
+                    <span class="status" id="status-12">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-12" onclick="handleClick(12, 'https://reliableguardianindifference.com/p45ign4yq?key=1a160b2c012243eac8bed670535909a6')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/zxxk5dd014?key=a890b2c4abca272b429da42bc25f7d9e" data-index="13">
+                <div class="card-header">
+                    <h3>Smartlink #13</h3>
+                    <span class="status" id="status-13">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-13" onclick="handleClick(13, 'https://reliableguardianindifference.com/zxxk5dd014?key=a890b2c4abca272b429da42bc25f7d9e')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/zahbv874?key=761d29426f7f273621bdacf3bb7b8a7d" data-index="14">
+                <div class="card-header">
+                    <h3>Smartlink #14</h3>
+                    <span class="status" id="status-14">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-14" onclick="handleClick(14, 'https://reliableguardianindifference.com/zahbv874?key=761d29426f7f273621bdacf3bb7b8a7d')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/v7w1fs139?key=6399b9ddb07a52f816bc171dc4c5757e" data-index="15">
+                <div class="card-header">
+                    <h3>Smartlink #15</h3>
+                    <span class="status" id="status-15">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-15" onclick="handleClick(15, 'https://reliableguardianindifference.com/v7w1fs139?key=6399b9ddb07a52f816bc171dc4c5757e')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/tpnbytepqs?key=088352176b4d5268baf38f73ac6761c1" data-index="16">
+                <div class="card-header">
+                    <h3>Smartlink #16</h3>
+                    <span class="status" id="status-16">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-16" onclick="handleClick(16, 'https://reliableguardianindifference.com/tpnbytepqs?key=088352176b4d5268baf38f73ac6761c1')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/dfkkd5jt?key=3994bb6ed826395b2eb976f597aab1ad" data-index="17">
+                <div class="card-header">
+                    <h3>Smartlink #17</h3>
+                    <span class="status" id="status-17">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-17" onclick="handleClick(17, 'https://reliableguardianindifference.com/dfkkd5jt?key=3994bb6ed826395b2eb976f597aab1ad')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/x2j7krbhy?key=6e2fa4ad4e8ba9c64b9afef9e40b9b42" data-index="18">
+                <div class="card-header">
+                    <h3>Smartlink #18</h3>
+                    <span class="status" id="status-18">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-18" onclick="handleClick(18, 'https://reliableguardianindifference.com/x2j7krbhy?key=6e2fa4ad4e8ba9c64b9afef9e40b9b42')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/bnsh8rn73y?key=592462ab9834701eb1b5f7d06a1aa285" data-index="19">
+                <div class="card-header">
+                    <h3>Smartlink #19</h3>
+                    <span class="status" id="status-19">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-19" onclick="handleClick(19, 'https://reliableguardianindifference.com/bnsh8rn73y?key=592462ab9834701eb1b5f7d06a1aa285')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/uehd8evqp?key=c4f114b4fe46943daac6c78796212089" data-index="20">
+                <div class="card-header">
+                    <h3>Smartlink #20</h3>
+                    <span class="status" id="status-20">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-20" onclick="handleClick(20, 'https://reliableguardianindifference.com/uehd8evqp?key=c4f114b4fe46943daac6c78796212089')">Click Link</button>
+                </div>
+            </div>
+            
+            <div class="card" data-link="https://reliableguardianindifference.com/xe3ekjrcva?key=376ad48d5c25b5c9cad2218c56d2d56f" data-index="21">
+                <div class="card-header">
+                    <h3>Smartlink #21</h3>
+                    <span class="status" id="status-21">Ready</span>
+                </div>
+                <div class="card-body">
+                    <p class="link-url">reliableguardianindifference.com</p>
+                    <button class="click-btn" id="btn-21" onclick="handleClick(21, 'https://reliableguardianindifference.com/xe3ekjrcva?key=376ad48d5c25b5c9cad2218c56d2d56f')">Click Link</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        let clickedCount = 0;
+        let successCount = 0;
+        let errorCount = 0;
+        
+        function updateStats() {
+            document.getElementById('clicked-links').textContent = clickedCount;
+            document.getElementById('success-links').textContent = successCount;
+            document.getElementById('error-links').textContent = errorCount;
+        }
+        
+        function handleClick(index, link) {
+            const btn = document.getElementById(`btn-${index}`);
+            const status = document.getElementById(`status-${index}`);
+            
+            btn.disabled = true;
+            status.textContent = 'Processing...';
+            status.className = 'status processing';
+            clickedCount++;
+            updateStats();
+            
+            // Trigger a custom event that Playwright can listen to
+            // This allows us to intercept and handle the click properly
+            const clickEvent = new CustomEvent('smartlinkClick', {
+                detail: { index: index, link: link }
+            });
+            window.dispatchEvent(clickEvent);
+            
+            // Also open link in new window (for Adsterra click tracking)
+            // This ensures the click event is registered
+            const newWindow = window.open(link, '_blank');
+            
+            if (newWindow) {
+                status.textContent = 'Opened';
+                status.className = 'status clicked';
+                successCount++;
+            } else {
+                status.textContent = 'Blocked';
+                status.className = 'status error';
+                errorCount++;
+                btn.disabled = false;
+            }
+            
+            updateStats();
+        }
+        
+        // Auto-click functionality (can be triggered externally)
+        window.autoClick = function(index) {
+            const card = document.querySelector(`[data-index="${index}"]`);
+            if (card) {
+                const link = card.getAttribute('data-link');
+                handleClick(index, link);
+            }
+        };
+        
+        // Auto-click all
+        window.autoClickAll = function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    const link = card.getAttribute('data-link');
+                    handleClick(index + 1, link);
+                }, index * 1000);
+            });
+        };
+    </script>
+</body>
+</html>

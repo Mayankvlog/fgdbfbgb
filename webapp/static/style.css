@@ -1,0 +1,157 @@
+body {
+  font-family: Segoe UI, Roboto, Arial, sans-serif;
+  background: #f7f9fc;
+  color: #111;
+  margin: 0;
+  padding: 24px;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(20, 30, 50, 0.08);
+}
+h1 {
+  margin-top: 0;
+}
+.config-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.config-table th {
+  background: #f0f4f8;
+  padding: 8px;
+  text-align: left;
+}
+.config-table td {
+  padding: 8px;
+  border-top: 1px solid #eef2f6;
+  vertical-align: top;
+}
+.config-table textarea {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px;
+  font-family: monospace;
+}
+.config-table input {
+  width: 100%;
+  padding: 8px;
+}
+.actions {
+  margin-top: 12px;
+}
+.actions button {
+  padding: 8px 14px;
+  background: #0078d4;
+  color: #fff;
+
+  /* Run panel styles */
+  .run-panel {
+    background: #f4f7fb;
+    border: 1px solid #e6eef9;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .run-panel h2 {
+    margin: 0 0 6px 0;
+  }
+  .run-actions button,
+  #start-btn {
+    background: #2b8aef;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+  }
+  .runs-list {
+    margin-top: 8px;
+  }
+  .run-item {
+    padding: 8px;
+    border: 1px solid #e9eef7;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .run-item pre.log {
+    background: #0b0b0b;
+    color: #e6e6e6;
+    padding: 8px;
+    border-radius: 6px;
+    max-height: 240px;
+    overflow: auto;
+  }
+  .run-item button {
+    background: #e53e3e;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+  }
+  .run-item .view-btn {
+    background: #6b7280;
+  }
+
+  /* Raw JSON editor */
+  .raw-json-panel {
+    margin: 12px 0;
+    padding: 10px;
+    border: 1px dashed #e1e8f5;
+    border-radius: 8px;
+    background: #fbfdff;
+  }
+  .raw-json-panel button#toggle-raw {
+    background: #111827;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+  }
+  .raw-json-panel button#save-raw {
+    background: #059669;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+  }
+  .raw-json-panel button#validate-raw {
+    background: #f97316;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  .raw-json-panel textarea#raw-json {
+    border: 1px solid #dbeafe;
+    padding: 12px;
+    border-radius: 6px;
+    background: #0f172a;
+    color: #e6eef8;
+  }
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.messages {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  color: #0b6;
+}
+.messages li {
+  background: #e6ffed;
+  padding: 8px;
+  border-radius: 4px;
+}

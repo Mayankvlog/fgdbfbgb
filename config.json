@@ -1,0 +1,15 @@
+{
+  "smartlinks": [
+    "https://www.effectivecpmnetwork.com/b11yy0ne?key=bab2fa0f67244341151dd7b1da93d121",
+    "https://www.effectivecpmnetwork.com/ki388363?key=4044d169e22844695121fd500862e3c1",
+    "https://www.effectivecpmnetwork.com/qif8y7kg8?key=72a33f77311bfa83fe2c209bbf35e1e1"
+  ],
+
+  "settings": {
+    "timeout": 60000,
+    "wait_after_open": 60,
+    "visit_duration": 40,
+    "recycle_interval_seconds": 1200,
+    "parallel_smartlinks": 5
+  }
+}
